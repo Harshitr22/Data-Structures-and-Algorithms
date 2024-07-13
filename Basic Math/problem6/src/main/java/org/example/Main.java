@@ -9,14 +9,31 @@ public class Main {
             System.out.println(e);
         }
     }
+//<---------- Brute Force Approach ---------->
+//    public static ArrayList<Integer> allDivisors(int n) {
+//        ArrayList<Integer> elements = new ArrayList<>();
+//        for (int i = 1; i <= n; i++) {
+//            if (n % i == 0) {
+//                elements.add(i);
+//            }
+//        }
+//        return elements;
+//    }
 
-    public static ArrayList<Integer> allDivisors(int n) {
-        ArrayList<Integer> elements = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            if (n % i == 0) {
-                elements.add(i);
+
+    //<---------- Optimal Force Approach ---------->
+    public static ArrayList<Integer> allDivisors( int n)
+    {
+        ArrayList<Integer> elems = new ArrayList<>();
+        for(int i=1; i*i <=n ; i++ ) {
+            if( n%i == 0){
+                elems.add(i);
+            }
+            if( n/i != i )
+            {
+                elems.add(n/i);
             }
         }
-        return elements;
+        return elems;
     }
 }
