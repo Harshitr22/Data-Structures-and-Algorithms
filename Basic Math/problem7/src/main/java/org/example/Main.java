@@ -11,6 +11,8 @@ public class Main {
         }else{
             System.out.println("The number "  + numb + " is not a prime number.");
         }
+        int[] nums = {2,7,9};
+        System.out.println(nums.length);
     }
 
     public static boolean isPrime(int n) {
