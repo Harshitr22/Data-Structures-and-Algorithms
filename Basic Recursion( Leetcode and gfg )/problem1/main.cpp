@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// Printing all the number upto N starting from 1
+
 class Solution{
 public:
     //Complete this function
