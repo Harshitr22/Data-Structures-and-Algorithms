@@ -1,7 +1,7 @@
 package org.example;
 import java.util.*;
 
-// Print the sum of all numbers upto N from 1
+// Print the factorial of a number
 
 public class Main{
     public static void main(String[] args){
@@ -12,7 +12,7 @@ public class Main{
     }
 
     public static int print(int n){
-        if(n==0) return 0;
-        return n + print(n-1);
+        if(n==0) return 1;
+        return n * print(n-1);
     }
 }
