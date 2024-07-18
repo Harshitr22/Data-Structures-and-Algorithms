@@ -3,6 +3,7 @@ package org.example;
 // Print the fibonacci series upto number N
 //Print nth number of fibonacci series
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
@@ -10,6 +11,7 @@ public class Main{
 	for(int e: arr) {
             System.out.print( e + " " );
         }
+
 
 //        System.out.println(fibonacci(4));
 
