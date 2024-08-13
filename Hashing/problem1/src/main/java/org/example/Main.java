@@ -54,31 +54,6 @@ public class Main{
 //        return count;
 //    }
 
-       boolean ans = reverse("harshit");
-       if(ans)
-       {
-           System.out.println("True");
-       }
-       else
-       {
-           System.out.println("False");
-       }
-
     }
-
-
-//   public static boolean isPalin(String s){
-//
-//   }
-
-   public static boolean reverse(String s) {
-
-        for(int i = 0; i < s.length(); i++){
-            
-        }
-   }
-
-
-
 
 }

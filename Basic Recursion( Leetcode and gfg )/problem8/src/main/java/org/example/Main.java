@@ -15,6 +15,8 @@ public class Main{
         }else{
             System.out.println("The number is not a part of fibonacci series.");
         }
+        HashMap<Integer, Integer> map = new HashMap<>();
+
     }
 
     public static boolean isfibo(int n){

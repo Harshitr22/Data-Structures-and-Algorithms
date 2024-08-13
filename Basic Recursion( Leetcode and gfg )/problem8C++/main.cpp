@@ -5,8 +5,7 @@ bool checkMember(int n){
     if(n == 1 || n ==0){
         return true;
     }
-    int last = 1;
-    int secondLast =0;
+    int last = 1, secondLast = 0;
     while(true){
         int curr = secondLast + last;
         if(curr == n){
