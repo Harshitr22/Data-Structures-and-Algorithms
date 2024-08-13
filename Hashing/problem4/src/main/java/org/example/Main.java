@@ -31,25 +31,39 @@ public class Main{
 
 //        Alternate Way : Not so optimal way but still good
         int[] arr = {1, 2, 1, 2, 3, 1, 8};
+
         countFreq(arr, arr.length);
     }
 
 
 //    Alternate Way
+//    public static void countFreq(int[] arr, int n){
+//        boolean[] visited = new boolean[n];
+//        for(int i=0; i<n; i++){
+//            if(visited[i] == true){
+//                continue;
+//            }
+//            int count = 1;
+//            for(int j=i+1; j<n; j++){
+//                if(arr[i] == arr[j]){
+//                    visited[j] = true;
+//                    count++;
+//                }
+//            }
+//            System.out.println(arr[i] + " appeared " + count + " times.");
+//        }
+//    }
+
     public static void countFreq(int[] arr, int n){
-        boolean[] visited = new boolean[n];
+        int[] elems = new int[n];
         for(int i=0; i<n; i++){
-            if(visited[i] == true){
-                continue;
-            }
-            int count = 1;
-            for(int j=i+1; j<n; j++){
-                if(arr[i] == arr[j]){
-                    visited[j] = true;
+            int count =1;
+            for(int j = i+1; j<n; j++){
+                if( arr[i] == arr[j]){
                     count++;
                 }
             }
-            System.out.println(arr[i] + " appeared " + count + " times.");
+            elems[i] = count;
         }
     }
 
