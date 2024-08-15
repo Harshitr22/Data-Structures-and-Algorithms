@@ -18,7 +18,6 @@ bool checkMember(int n){
         last = curr;
     }
 }
-
 int main()
 {
     int numb;
