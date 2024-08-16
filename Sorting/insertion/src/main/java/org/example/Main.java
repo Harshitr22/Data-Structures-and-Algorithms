@@ -1,11 +1,11 @@
 package org.example;
 
-// Bubble Sort
+// Insertion Sort Algorithm
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
         // Getting input from the user
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the number of elements you want in an array: ");
@@ -29,7 +29,7 @@ public class Main {
         System.out.println("--------------------");
 
         // getting results of bubble sort
-        int[] array = bubbleSort(arr, arr.length);
+        int[] array = insertionSort(arr);
 
         // Displaying the result of bubble sort
         System.out.println("The sorted array is: ");
@@ -40,15 +40,14 @@ public class Main {
         System.out.print("}");
     }
 
-    // Bubble Sort algorithm implementation
-    public static int[] bubbleSort(int[] arr, int n){
-        for(int i=n-1; i>=0; i--){
-            for(int j=0; j<=i-1; j++){
-                if((arr[j]> arr[j+1])){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
+    public static int[] insertionSort(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            int j=i;
+            while(j>0 && arr[j-1]>arr[j]){
+                int temp=arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+                j--;
             }
         }
         return arr;
