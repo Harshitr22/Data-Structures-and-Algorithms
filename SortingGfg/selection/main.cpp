@@ -2,6 +2,9 @@
 using namespace std;
 #include <vector>
 
+// Selection sort algorithm
+
+
 int  select(vector<int> arr, int i)
 {
     // code here such that selectionSort() sorts arr[]
