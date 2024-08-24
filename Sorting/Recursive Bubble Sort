@@ -1,0 +1,37 @@
+// Recursive Bubble Sort
+ 
+public class RecurBubble {
+ 
+    public static void main(String[] args) {
+       int[] arr = {4,6,2,5,7,9,1,3};
+        System.out.println("Before Sorting: ");
+        System.out.print("{ ");
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.print("}");
+        System.out.println();
+ 
+        bubbleSort(arr, arr.length);
+        System.out.println("After Sorting: ");
+        System.out.print("{ ");
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.print("}");
+    }
+ 
+    public static void bubbleSort(int[] arr, int n){
+        if(n == 0) return;
+ 
+        for(int i=0; i<=n-2; i++){
+            if(arr[i+1] < arr[i]){
+                int temp =  arr[i+1];
+                arr[i+1] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        bubbleSort(arr, n-1);
+    }
+}
+ 
